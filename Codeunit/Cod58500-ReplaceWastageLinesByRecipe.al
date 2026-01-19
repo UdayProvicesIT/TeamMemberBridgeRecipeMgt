@@ -30,6 +30,15 @@ codeunit 58500 "Replace Wastage LinesByRecipe"
         if not RecipeMgmtSetup."Overwrite Assembly BOMs" then exit;
         if not Location.Get(ParentLine."LIT Location Code") then exit;
         if not Location."Overwrite Assembly BOMs" then exit;
+        if not Item.Get(ParentLine."LIT Item No.") then
+            exit;
+
+        if (Item."Replenishment System" in
+            [Item."Replenishment System"::Assembly,
+             Item."Replenishment System"::"Prod. Order"]) then begin
+
+            if not Item."Overwrite Assembly BOMs" then exit;
+        end;
 
         RecipeNo :=
             RecipeExplosionMgmt.FindRecipeForItem(

@@ -30,6 +30,15 @@ codeunit 58502 "Replace LIT Trans.LineByRecipe"
         if not RecipeMgmtSetup."Overwrite Assembly BOMs" then exit;
         if not Location.Get(TransferLine."LIT Transfer-from Code") then exit;
         if not Location."Overwrite Assembly BOMs" then exit;
+        if not Item.Get(TransferLine."LIT Item No.") then
+            exit;
+
+        if (Item."Replenishment System" in
+            [Item."Replenishment System"::Assembly,
+             Item."Replenishment System"::"Prod. Order"]) then begin
+
+            if not Item."Overwrite Assembly BOMs" then exit;
+        end;
 
         RecipeNo :=
             RecipeExplosionMgmt.FindRecipeForItem(

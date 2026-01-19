@@ -3,9 +3,7 @@ codeunit 58501 "Recipe Explosion Management"
     var
         Math: Codeunit Math;
 
-    // ------------------------------------------------------------
     // Find recipe for item based on location & default
-    // ------------------------------------------------------------
     procedure FindRecipeForItem(
         LocationCode: Code[10];
         ItemNo: Code[20]): Code[20]
@@ -35,9 +33,7 @@ codeunit 58501 "Recipe Explosion Management"
         exit('');
     end;
 
-    // ------------------------------------------------------------
     // Explode recipe recursively (BASE quantities only)
-    // ------------------------------------------------------------
     procedure ExplodeRecipeLines(
         LocationCode: Code[10];
         RecipeHeader: Record "Recipe Header";
@@ -69,9 +65,7 @@ codeunit 58501 "Recipe Explosion Management"
             until RecipeLine.Next() = 0;
     end;
 
-    // ------------------------------------------------------------
     // Handle single recipe line
-    // ------------------------------------------------------------
     local procedure HandleRecipeLine(
         LocationCode: Code[10];
         RecipeHeader: Record "Recipe Header";
@@ -124,9 +118,7 @@ codeunit 58501 "Recipe Explosion Management"
             ItemQtyBaseMap);
     end;
 
-    // ------------------------------------------------------------
     // Apply substitution policy with priority
-    // ------------------------------------------------------------
     procedure ApplySubstitutionWithPriority(
         LocationCode: Code[10];
         RecipeHeader: Record "Recipe Header";
@@ -202,9 +194,6 @@ codeunit 58501 "Recipe Explosion Management"
                 RemainingQtyBase);
     end;
 
-    // ------------------------------------------------------------
-    // Helpers
-    // ------------------------------------------------------------
     local procedure AddToItemQtyMap(
         var ItemQtyBaseMap: Dictionary of [Code[20], Decimal];
         ItemNo: Code[20];
