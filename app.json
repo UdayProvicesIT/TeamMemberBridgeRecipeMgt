@@ -1,0 +1,50 @@
+{
+  "id": "58b000b5-e426-43c3-9a2a-b799bb503877",
+  "name": "Recipes Management Bridge Team Member",
+  "publisher": "Microsoft Partner",
+  "version": "2.0.0.5",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": 
+  [
+    { 
+    "id": "8605200f-2d4b-4ecd-88cd-618e669b8407",
+    "name": "FTM - Team Member Customizations",
+    "publisher": "LITS Services",
+   "version": "26.0.0.85"
+    },
+    {
+    "id": "58b000b5-e426-43c3-9a2a-b799bb503876",
+    "name": "Recipes Management",
+    "publisher": "Microsoft Partner",
+    "version": "1.0.0.13"
+    },
+    {
+          "id": "208a0d1f-1dad-446c-8d05-01825112b898",
+      "name": "Five Thirty Customizations",
+      "publisher": "LITS SERVICES",
+      "version": "26.0.0.35"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "26.0.0.0",
+  "idRanges": [
+    {
+      "from": 58500,
+      "to": 58649
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "runtime": "15.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

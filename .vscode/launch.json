@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "AM_Sandbox_22012026",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "AM_Sandbox_22012026",
+            // "environmentName": "AM_Sandbox_30092025",
+            "tenant": "de280ae9-0ff7-48da-98aa-02165503e357",
+            "startupObjectId": 59502,
+            "startupObjectType": "Page",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "schemaUpdateMode": "ForceSync"
+        }
+    ]
+}
